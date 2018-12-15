@@ -1,0 +1,25 @@
+{
+  "name": "rxjs-observable-of-redis-cmd",
+  "version": "1.0.0",
+  "description": "creates an rxjs6 observable of a redis command using js redis client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascualmg/rxjs-observable-of-redis-cmd.git"
+  },
+  "keywords": [
+    "rxjs",
+    "rxjs6",
+    "redis",
+    "observable"
+  ],
+  "author": "Pascual Muñoz Galián",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pascualmg/rxjs-observable-of-redis-cmd/issues"
+  },
+  "homepage": "https://github.com/pascualmg/rxjs-observable-of-redis-cmd#readme"
+}
