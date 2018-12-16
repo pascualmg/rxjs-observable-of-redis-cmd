@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs'
 import redis from 'redis'
 
-export default function OORedisCmd (redisCmdName, redisParams, redisConfig) {
+export default function OORedis (redisCmdName, redisParams, redisConfig) {
   return Observable.create(function (observer) {
     assertIsFunctionOf(rclient, redisCmdName)
 
