@@ -19,6 +19,9 @@ module.exports = function OORedis (redisCmdName, redisParams, redisConfig) {
         observer.complete()
       })
     })
+    rclient.on('error', function (err) {
+      observer.error(err)
+    })
     return {
       unsubscribe: function () {
         //rclient.end ?
