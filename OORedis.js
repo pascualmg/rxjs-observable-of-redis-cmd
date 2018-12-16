@@ -3,7 +3,8 @@
 var Observable = require('rxjs').Observable
 var redis = require('redis')
 
-export default function OORedis (redisCmdName, redisParams, redisConfig) {
+var module = module || {}
+module.exports = function OORedis (redisCmdName, redisParams, redisConfig) {
   return Observable.create(function (observer) {
     assertIsFunctionOf(rclient, redisCmdName)
 

@@ -1,6 +1,6 @@
 {
   "name": "rxjs-observable-of-redis-cmd",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "creates an rxjs6 observable of a redis command using js redis client.",
   "main": "index.js",
   "scripts": {
