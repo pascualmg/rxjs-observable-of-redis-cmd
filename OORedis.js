@@ -1,12 +1,14 @@
-import { Observable } from 'rxjs'
-import redis from 'redis'
+"use strict"
+
+var Observable = require('rxjs').Observable
+var redis = require('redis')
 
 export default function OORedis (redisCmdName, redisParams, redisConfig) {
   return Observable.create(function (observer) {
     assertIsFunctionOf(rclient, redisCmdName)
 
     const rclient = redis.createClient(redisConfig.port, redisConfig.ip)
-    rclient.on('connect', () => {
+    rclient.on('connect', function () {
       rclient[redisCmdName](redisParams, (err, result) => {
         console.log('result in observable:', result)//TODO: borrame.
         if ( null !== err) {
