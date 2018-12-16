@@ -15,7 +15,6 @@ module.exports = function OORedis (redisCmdName, redisParams, redisConfig) {
         console.log('result in observable:', result)//TODO: borrame.
         if (null !== err) {
           observer.error(err)
-          observer.complete()
         }
         observer.next(result)
         observer.complete()
@@ -26,6 +25,7 @@ module.exports = function OORedis (redisCmdName, redisParams, redisConfig) {
     })
     return {
       unsubscribe: function () {
+        rclient.quit()
       },
     }
   })
