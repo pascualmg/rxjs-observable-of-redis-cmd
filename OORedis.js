@@ -6,7 +6,7 @@ var redis = require('redis')
 var module = module || {}
 module.exports = function OORedis (redisCmdName, redisParams, redisConfig) {
   return Observable.create(function (observer) {
-    var rclient = redis.createClient(redisConfig.port, redisConfig.ip)
+    var rclient = redis.createClient(redisConfig.port, redisConfig.host)
     rclient.on('connect', function () {
       asserts()
       rclient[redisCmdName](redisParams, (err, result) => {
